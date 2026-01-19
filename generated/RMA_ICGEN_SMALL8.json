@@ -1,0 +1,118 @@
+{
+  "FloodFillLines": {
+    "FFill_0": {
+      "Points": [
+        {
+          "Location": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          },
+          "HRange": 600,
+          "VRange": 600,
+          "FloorAngle": 0
+        },
+        {
+          "Location": {
+            "X": 845,
+            "Y": -928,
+            "Z": -1517
+          },
+          "HRange": 862,
+          "VRange": 771,
+          "FloorAngle": 0
+        }
+      ]
+    },
+    "FFill_1": {
+      "Points": [
+        {
+          "Location": {
+            "X": 845,
+            "Y": -928,
+            "Z": -1517
+          },
+          "HRange": 862,
+          "VRange": 771,
+          "FloorAngle": 0
+        },
+        {
+          "Location": {
+            "X": -1755,
+            "Y": 170,
+            "Z": -1102
+          },
+          "HRange": 823,
+          "VRange": 969,
+          "FloorAngle": 15
+        },
+        {
+          "Location": {
+            "X": 1747,
+            "Y": 18,
+            "Z": -1737
+          },
+          "HRange": 702,
+          "VRange": 781,
+          "FloorAngle": 46
+        },
+        {
+          "Location": {
+            "X": 2074,
+            "Y": 236,
+            "Z": -1639
+          },
+          "HRange": 884,
+          "VRange": 751,
+          "FloorAngle": 0
+        }
+      ]
+    }
+  },
+  "Entrances": {
+    "Entrance_0": {
+      "Location": {
+        "X": 0,
+        "Y": 600,
+        "Z": 150
+      },
+      "Type": "Entrance",
+      "Direction": {
+        "Roll": 0,
+        "Pitch": 0,
+        "Yaw": -90
+      }
+    },
+    "Entrance_1": {
+      "Location": {
+        "X": 845,
+        "Y": -1790,
+        "Z": -1367
+      },
+      "Type": "Entrance",
+      "Direction": {
+        "Roll": 0,
+        "Pitch": 0,
+        "Yaw": 90
+      }
+    },
+    "Entrance_2": {
+      "Location": {
+        "X": 2074,
+        "Y": 1120,
+        "Z": -1489
+      },
+      "Type": "Exit",
+      "Direction": {
+        "Roll": 0,
+        "Pitch": 0,
+        "Yaw": 90
+      }
+    }
+  },
+  "Name": "RMA_ICGEN_SMALL8",
+  "Bounds": 2500,
+  "Tags": [
+    "Rooms.Linear.CustomSmall"
+  ]
+}

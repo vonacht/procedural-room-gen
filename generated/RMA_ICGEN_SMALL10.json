@@ -14,23 +14,43 @@
                 },
                 {
                     "Location": {
-                        "X": -525,
-                        "Y": 623,
-                        "Z": -351
+                        "X": 523,
+                        "Y": 553,
+                        "Z": 427
                     },
-                    "HRange": 727,
-                    "VRange": 828,
+                    "HRange": 871,
+                    "VRange": 897,
+                    "FloorAngle": 1
+                },
+                {
+                    "Location": {
+                        "X": -698,
+                        "Y": 597,
+                        "Z": 223
+                    },
+                    "HRange": 801,
+                    "VRange": 682,
+                    "FloorAngle": 32
+                },
+                {
+                    "Location": {
+                        "X": 608,
+                        "Y": 576,
+                        "Z": 171
+                    },
+                    "HRange": 909,
+                    "VRange": 699,
                     "FloorAngle": 0
                 },
                 {
                     "Location": {
-                        "X": 886,
-                        "Y": -903,
-                        "Z": -1665
+                        "X": 865,
+                        "Y": 846,
+                        "Z": 1882
                     },
-                    "HRange": 782,
-                    "VRange": 767,
-                    "FloorAngle": 26
+                    "HRange": 914,
+                    "VRange": 845,
+                    "FloorAngle": 0
                 }
             ]
         },
@@ -38,53 +58,33 @@
             "Points": [
                 {
                     "Location": {
-                        "X": 886,
-                        "Y": -903,
-                        "Z": -1665
+                        "X": 865,
+                        "Y": 846,
+                        "Z": 1882
                     },
-                    "HRange": 782,
-                    "VRange": 767,
-                    "FloorAngle": 26
-                },
-                {
-                    "Location": {
-                        "X": -1602,
-                        "Y": -78,
-                        "Z": -1537
-                    },
-                    "HRange": 799,
-                    "VRange": 779,
+                    "HRange": 914,
+                    "VRange": 845,
                     "FloorAngle": 0
                 },
                 {
                     "Location": {
-                        "X": 1588,
-                        "Y": -160,
-                        "Z": -1009
+                        "X": 1720,
+                        "Y": -1755,
+                        "Z": 1182
                     },
-                    "HRange": 797,
-                    "VRange": 983,
+                    "HRange": 1010,
+                    "VRange": 864,
                     "FloorAngle": 0
                 },
                 {
                     "Location": {
-                        "X": -1638,
-                        "Y": 85,
-                        "Z": -1812
+                        "X": 2130,
+                        "Y": -2031,
+                        "Z": 1124
                     },
-                    "HRange": 791,
-                    "VRange": 792,
+                    "HRange": 834,
+                    "VRange": 963,
                     "FloorAngle": 0
-                },
-                {
-                    "Location": {
-                        "X": 2064,
-                        "Y": 171,
-                        "Z": -3284
-                    },
-                    "HRange": 826,
-                    "VRange": 784,
-                    "FloorAngle": 46
                 }
             ]
         }
@@ -92,9 +92,9 @@
     "Entrances": {
         "Entrance_0": {
             "Location": {
-                "X": -525,
-                "Y": 1350,
-                "Z": -201
+                "X": 865,
+                "Y": 1760,
+                "Z": 2032
             },
             "Type": "Entrance",
             "Direction": {
@@ -105,9 +105,9 @@
         },
         "Entrance_1": {
             "Location": {
-                "X": 886,
-                "Y": -1685,
-                "Z": -1515
+                "X": 0,
+                "Y": -600,
+                "Z": 150
             },
             "Type": "Entrance",
             "Direction": {
@@ -118,21 +118,21 @@
         },
         "Entrance_2": {
             "Location": {
-                "X": 2064,
-                "Y": 997,
-                "Z": -3134
+                "X": 2130,
+                "Y": -2865,
+                "Z": 1274
             },
             "Type": "Exit",
             "Direction": {
                 "Roll": 0,
                 "Pitch": 0,
-                "Yaw": 90
+                "Yaw": -90
             }
         }
     },
-    "Name": "test room",
-    "Bounds": 3500,
+    "Name": "RMA_ICGEN_SMALL10",
+    "Bounds": 2500,
     "Tags": [
-        "Rooms.Linear.Test"
+        "Rooms.Linear.CustomSmall"
     ]
 }

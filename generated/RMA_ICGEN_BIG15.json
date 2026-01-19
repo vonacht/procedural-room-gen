@@ -1,0 +1,239 @@
+{
+    "FloodFillLines": {
+        "FFill_0": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 0,
+                        "Y": 0,
+                        "Z": 0
+                    },
+                    "HRange": 600,
+                    "VRange": 600,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 648,
+                        "Y": 574,
+                        "Z": 222
+                    },
+                    "HRange": 1207,
+                    "VRange": 1166,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -603,
+                        "Y": -617,
+                        "Z": -23
+                    },
+                    "HRange": 1164,
+                    "VRange": 1147,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -596,
+                        "Y": 651,
+                        "Z": 596
+                    },
+                    "HRange": 1014,
+                    "VRange": 1043,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 835,
+                        "Y": -823,
+                        "Z": -1237
+                    },
+                    "HRange": 1246,
+                    "VRange": 1166,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_1": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 835,
+                        "Y": -823,
+                        "Z": -1237
+                    },
+                    "HRange": 1246,
+                    "VRange": 1166,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -2099,
+                        "Y": -405,
+                        "Z": -623
+                    },
+                    "HRange": 1082,
+                    "VRange": 1203,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 2085,
+                        "Y": 488,
+                        "Z": -1488
+                    },
+                    "HRange": 960,
+                    "VRange": 1080,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -2076,
+                        "Y": -435,
+                        "Z": -2258
+                    },
+                    "HRange": 1133,
+                    "VRange": 1258,
+                    "FloorAngle": 14
+                },
+                {
+                    "Location": {
+                        "X": 2381,
+                        "Y": -720,
+                        "Z": -3193
+                    },
+                    "HRange": 1028,
+                    "VRange": 1084,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_2": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 2381,
+                        "Y": -720,
+                        "Z": -3193
+                    },
+                    "HRange": 1028,
+                    "VRange": 1084,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -3484,
+                        "Y": 336,
+                        "Z": -2636
+                    },
+                    "HRange": 1062,
+                    "VRange": 1082,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 3734,
+                        "Y": 563,
+                        "Z": -4165
+                    },
+                    "HRange": 1130,
+                    "VRange": 1078,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_3": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 3734,
+                        "Y": 563,
+                        "Z": -4165
+                    },
+                    "HRange": 1130,
+                    "VRange": 1078,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 4880,
+                        "Y": 1673,
+                        "Z": -4186
+                    },
+                    "HRange": 1255,
+                    "VRange": 1044,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 5127,
+                        "Y": -1985,
+                        "Z": -4384
+                    },
+                    "HRange": 1216,
+                    "VRange": 1173,
+                    "FloorAngle": 0
+                }
+            ]
+        }
+    },
+    "Entrances": {
+        "Entrance_0": {
+            "Location": {
+                "X": 648,
+                "Y": 1781,
+                "Z": 372
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": -90
+            }
+        },
+        "Entrance_1": {
+            "Location": {
+                "X": 835,
+                "Y": -2069,
+                "Z": -1087
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        },
+        "Entrance_2": {
+            "Location": {
+                "X": 4880,
+                "Y": 2928,
+                "Z": -4036
+            },
+            "Type": "Exit",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        },
+        "Entrance_3": {
+            "Location": {
+                "X": 5127,
+                "Y": -3201,
+                "Z": -4234
+            },
+            "Type": "Exit",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": -90
+            }
+        }
+    },
+    "Name": "RMA_ICGEN_BIG15",
+    "Bounds": 4500,
+    "Tags": [
+        "Rooms.Linear.CustomBig"
+    ]
+}

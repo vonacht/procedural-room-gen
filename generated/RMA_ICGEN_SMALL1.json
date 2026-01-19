@@ -1,0 +1,151 @@
+{
+    "FloodFillLines": {
+        "FFill_0": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 0,
+                        "Y": 0,
+                        "Z": 0
+                    },
+                    "HRange": 600,
+                    "VRange": 600,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -707,
+                        "Y": 597,
+                        "Z": -440
+                    },
+                    "HRange": 726,
+                    "VRange": 731,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -634,
+                        "Y": -668,
+                        "Z": 389
+                    },
+                    "HRange": 839,
+                    "VRange": 687,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 899,
+                        "Y": 842,
+                        "Z": -1276
+                    },
+                    "HRange": 948,
+                    "VRange": 923,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_1": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 899,
+                        "Y": 842,
+                        "Z": -1276
+                    },
+                    "HRange": 948,
+                    "VRange": 923,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 1756,
+                        "Y": -1713,
+                        "Z": -485
+                    },
+                    "HRange": 737,
+                    "VRange": 727,
+                    "FloorAngle": 30
+                },
+                {
+                    "Location": {
+                        "X": 1742,
+                        "Y": 1790,
+                        "Z": -698
+                    },
+                    "HRange": 985,
+                    "VRange": 816,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 2165,
+                        "Y": 2075,
+                        "Z": 7
+                    },
+                    "HRange": 645,
+                    "VRange": 863,
+                    "FloorAngle": 0
+                }
+            ]
+        }
+    },
+    "Entrances": {
+        "Entrance_0": {
+            "Location": {
+                "X": 899,
+                "Y": 1790,
+                "Z": -1126
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": -90
+            }
+        },
+        "Entrance_1": {
+            "Location": {
+                "X": -634,
+                "Y": -1507,
+                "Z": 539
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        },
+        "Entrance_2": {
+            "Location": {
+                "X": 1742,
+                "Y": 2775,
+                "Z": -548
+            },
+            "Type": "Exit",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        },
+        "Entrance_3": {
+            "Location": {
+                "X": 1756,
+                "Y": -2450,
+                "Z": -335
+            },
+            "Type": "Exit",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": -90
+            }
+        }
+    },
+    "Name": "RMA_ICGEN_SMALL1",
+    "Bounds": 2500,
+    "Tags": [
+        "Rooms.Linear.CustomSmall"
+    ]
+}

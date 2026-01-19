@@ -1,0 +1,216 @@
+{
+    "FloodFillLines": {
+        "FFill_0": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 0,
+                        "Y": 0,
+                        "Z": 0
+                    },
+                    "HRange": 600,
+                    "VRange": 600,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 552,
+                        "Y": -507,
+                        "Z": 575
+                    },
+                    "HRange": 1137,
+                    "VRange": 1140,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -546,
+                        "Y": -546,
+                        "Z": 249
+                    },
+                    "HRange": 1084,
+                    "VRange": 1102,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 848,
+                        "Y": -918,
+                        "Z": 1635
+                    },
+                    "HRange": 1212,
+                    "VRange": 1159,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_1": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 848,
+                        "Y": -918,
+                        "Z": 1635
+                    },
+                    "HRange": 1212,
+                    "VRange": 1159,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 2080,
+                        "Y": 311,
+                        "Z": 2514
+                    },
+                    "HRange": 1279,
+                    "VRange": 1001,
+                    "FloorAngle": 15
+                },
+                {
+                    "Location": {
+                        "X": -2062,
+                        "Y": 245,
+                        "Z": 2370
+                    },
+                    "HRange": 991,
+                    "VRange": 971,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -2095,
+                        "Y": 342,
+                        "Z": 1354
+                    },
+                    "HRange": 1036,
+                    "VRange": 1041,
+                    "FloorAngle": 16
+                },
+                {
+                    "Location": {
+                        "X": 2320,
+                        "Y": -608,
+                        "Z": -258
+                    },
+                    "HRange": 1186,
+                    "VRange": 1154,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_2": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 2320,
+                        "Y": -608,
+                        "Z": -258
+                    },
+                    "HRange": 1186,
+                    "VRange": 1154,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 3908,
+                        "Y": -882,
+                        "Z": 473
+                    },
+                    "HRange": 946,
+                    "VRange": 1006,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_3": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 3908,
+                        "Y": -882,
+                        "Z": 473
+                    },
+                    "HRange": 946,
+                    "VRange": 1006,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -4846,
+                        "Y": 16,
+                        "Z": -209
+                    },
+                    "HRange": 1149,
+                    "VRange": 1101,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 4893,
+                        "Y": 40,
+                        "Z": 19
+                    },
+                    "HRange": 1041,
+                    "VRange": 1197,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 5205,
+                        "Y": -349,
+                        "Z": 966
+                    },
+                    "HRange": 1076,
+                    "VRange": 1128,
+                    "FloorAngle": 0
+                }
+            ]
+        }
+    },
+    "Entrances": {
+        "Entrance_0": {
+            "Location": {
+                "X": 552,
+                "Y": 630,
+                "Z": 725
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": -90
+            }
+        },
+        "Entrance_1": {
+            "Location": {
+                "X": 848,
+                "Y": -2130,
+                "Z": 1785
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        },
+        "Entrance_2": {
+            "Location": {
+                "X": -4846,
+                "Y": 1165,
+                "Z": -59
+            },
+            "Type": "Exit",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        }
+    },
+    "Name": "RMA_ICGEN_BIG7",
+    "Bounds": 4500,
+    "Tags": [
+        "Rooms.Linear.CustomBig"
+    ]
+}

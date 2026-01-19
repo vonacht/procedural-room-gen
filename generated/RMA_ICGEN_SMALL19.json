@@ -1,0 +1,108 @@
+{
+    "FloodFillLines": {
+        "FFill_0": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 0,
+                        "Y": 0,
+                        "Z": 0
+                    },
+                    "HRange": 600,
+                    "VRange": 600,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -573,
+                        "Y": 562,
+                        "Z": 114
+                    },
+                    "HRange": 748,
+                    "VRange": 744,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 922,
+                        "Y": -868,
+                        "Z": 240
+                    },
+                    "HRange": 892,
+                    "VRange": 763,
+                    "FloorAngle": 0
+                }
+            ]
+        },
+        "FFill_1": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 922,
+                        "Y": -868,
+                        "Z": 240
+                    },
+                    "HRange": 892,
+                    "VRange": 763,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 2101,
+                        "Y": -256,
+                        "Z": 1899
+                    },
+                    "HRange": 811,
+                    "VRange": 784,
+                    "FloorAngle": 0
+                }
+            ]
+        }
+    },
+    "Entrances": {
+        "Entrance_0": {
+            "Location": {
+                "X": -573,
+                "Y": 1310,
+                "Z": 264
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": -90
+            }
+        },
+        "Entrance_1": {
+            "Location": {
+                "X": 922,
+                "Y": -1760,
+                "Z": 390
+            },
+            "Type": "Entrance",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        },
+        "Entrance_2": {
+            "Location": {
+                "X": 2101,
+                "Y": 555,
+                "Z": 2049
+            },
+            "Type": "Exit",
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 90
+            }
+        }
+    },
+    "Name": "RMA_ICGEN_SMALL19",
+    "Bounds": 2500,
+    "Tags": [
+        "Rooms.Linear.CustomSmall"
+    ]
+}
