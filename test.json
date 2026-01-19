@@ -1,0 +1,78 @@
+{
+    "FloodFillLines": {
+        "FFill_0": {
+            "Points": [
+                {
+                    "Location": {
+                        "X": 0,
+                        "Y": 0,
+                        "Z": 0
+                    },
+                    "HRange": 600,
+                    "VRange": 600,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 801,
+                        "Y": 844,
+                        "Z": -119
+                    },
+                    "HRange": 705,
+                    "VRange": 838,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 1775,
+                        "Y": 1839,
+                        "Z": 1351
+                    },
+                    "HRange": 760,
+                    "VRange": 814,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": -2781,
+                        "Y": -3054,
+                        "Z": -363
+                    },
+                    "HRange": 749,
+                    "VRange": 825,
+                    "FloorAngle": 0
+                },
+                {
+                    "Location": {
+                        "X": 1805,
+                        "Y": -2009,
+                        "Z": -612
+                    },
+                    "HRange": 825,
+                    "VRange": 839,
+                    "FloorAngle": 0
+                }
+            ]
+        }
+    },
+    "Entrances": {
+        "Entrance_0": {
+            "Location": {
+                "X": 0,
+                "Y": 0,
+                "Z": 0
+            },
+            "Direction": {
+                "Roll": 0,
+                "Pitch": 0,
+                "Yaw": 0
+            },
+            "Type": "Entrance"
+        }
+    },
+    "Name": "test room",
+    "Bounds": 3500,
+    "Tags": [
+        "Rooms.Linear.Test"
+    ]
+}
