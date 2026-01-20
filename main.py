@@ -1,8 +1,15 @@
 import json
+import logging
 import random
+import argparse
 import numpy as np
 from dataclasses import dataclass
 from more_itertools import flatten
+from pathlib import Path
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
+)
 
 
 @dataclass
@@ -13,14 +20,18 @@ class Point:
     angle: int
 
 
-def generate_room(num_rooms: int, max_num_features: int) -> list:
+def generate_room(settings: dict) -> list:
 
     current_room = Point((0, 0, 0), 600, 600, 0)
     rooms = [[current_room]]
     current_line = 0
-    for room in range(num_rooms):
-        for _ in range(random.randrange(max_num_features)):
-            angle = random.randint(0, 50) if random.randint(1, 10) >= 8 else 0
+    for room in range(settings["num_rooms"]):
+        for _ in range(random.randrange(settings["num_features"])):
+            angle = (
+                random.randint(10, 50)
+                if random.randint(1, 100) >= (100 - settings["angle_percent"])
+                else 0
+            )
             next_feature = Point(
                 (
                     random.choice([1, -1])
@@ -43,40 +54,74 @@ def generate_room(num_rooms: int, max_num_features: int) -> list:
                         )[0]
                     ),
                 ),
-                int(np.random.normal(1100, 100, 1)[0]),
-                int(np.random.normal(1100, 100, 1)[0]),
+                int(
+                    np.random.normal(
+                        settings["avg_feature_size"],
+                        settings["feature_size_variance"],
+                        1,
+                    )[0]
+                ),
+                int(
+                    np.random.normal(
+                        settings["avg_feature_height"],
+                        settings["feature_size_variance"],
+                        1,
+                    )[0]
+                ),
                 angle,
             )
             rooms[current_line].append(next_feature)
         # Advance line:
-        angle = random.randint(0, 50) if random.randint(1, 10) >= 8 else 0
+        angle = (
+            random.randint(10, 50)
+            if random.randint(1, 100) >= (100 - settings["angle_percent"])
+            else 0
+        )
         next_room = Point(
             (
                 int(
                     np.random.normal(
-                        current_room.center[0] + current_room.radius + 300, 50, 1
+                        current_room.center[0]
+                        + current_room.radius
+                        + settings["next_room_offset"],
+                        100,
+                        1,
                     )[0]
                 ),
                 random.choice([1, -1])
                 * int(
                     np.random.normal(
-                        current_room.center[1] + current_room.radius + 300, 50, 1
+                        current_room.center[1]
+                        + current_room.radius
+                        + settings["next_room_offset"],
+                        100,
+                        1,
                     )[0]
                 ),
                 int(
                     np.random.uniform(
-                        -2000 + current_room.center[2], 2000 + current_room.center[2], 1
+                        -settings["room_verticality"] + current_room.center[2],
+                        settings["room_verticality"] + current_room.center[2],
+                        1,
                     )[0]
                 ),
             ),
-            int(np.random.normal(1100, 100, 1)[0]),
-            int(np.random.normal(1100, 100, 1)[0]),
+            int(
+                np.random.normal(
+                    settings["avg_room_size"], settings["room_size_variance"], 1
+                )[0]
+            ),
+            int(
+                np.random.normal(
+                    settings["avg_room_height"], settings["room_size_variance"], 1
+                )[0]
+            ),
             angle,
         )
         rooms[current_line].append(next_room)
         # advance_room = False if random.randint(1, 10) >= 4 else True
         advance_room = True
-        if advance_room and room != num_rooms - 1:
+        if advance_room and room != settings["num_rooms"] - 1:
             current_line += 1
             current_room = next_room
             rooms.append([next_room])
@@ -135,70 +180,106 @@ def generate_entrances(points: list) -> list:
     return [generate_e(i, p) for i, p in zip([0, -1], ["Entrance", "Exit"])]
 
 
-def main():
+def build_json(
+        points: list, entrances: list, room_num: int, key: str, settings: dict
+) -> dict:
 
-    for room in range(20):
-
-        result = {"FloodFillLines": {}}
-        points = generate_room(4, 5)
-        entrances = generate_entrances(points)
-        for ii, line in enumerate(points):
-            lines = {"Points": []}
-            for point in line:
-                lines["Points"].append(
-                    {
-                        "Location": {
-                            "X": point.center[0],
-                            "Y": point.center[1],
-                            "Z": point.center[2],
-                        },
-                        "HRange": point.radius,
-                        "VRange": point.height,
-                        "FloorAngle": point.angle,
-                    }
-                )
-            result["FloodFillLines"][f"FFill_{ii}"] = lines
-
-        result["Entrances"] = {}
-        for ii, entrance in enumerate(flatten(entrances)):
-            result["Entrances"].update(
+    result = {"FloodFillLines": {}}
+    for ii, line in enumerate(points):
+        lines = {"Points": []}
+        for point in line:
+            lines["Points"].append(
                 {
-                    f"Entrance_{ii}": {
-                        "Location": {
-                            "X": entrance[0],
-                            "Y": entrance[1],
-                            "Z": entrance[2],
-                        },
-                        "Type": entrance[-1],
-                        "Direction": {
-                            "Roll": entrance[3],
-                            "Pitch": entrance[4],
-                            "Yaw": entrance[5],
-                        },
-                    }
+                    "Location": {
+                        "X": point.center[0],
+                        "Y": point.center[1],
+                        "Z": point.center[2],
+                    },
+                    "HRange": point.radius,
+                    "VRange": point.height,
+                    "FloorAngle": point.angle,
                 }
             )
+        result["FloodFillLines"][f"FFill_{ii}"] = lines
 
-        """
-        result["Entrances"] = {"Entrance_0": {
-            "Location": {
-                "X": 0, 
-                "Y": 0, 
-                "Z": 0,
-                },
-            "Direction": {
-                "Roll": 0,
-                "Pitch": 0,
-                "Yaw": 0 
-                },
-            "Type": "Entrance"
-            }} 
-        """
-        result["Name"] = f"RMA_ICGEN_BIG{room}"
-        result["Bounds"] = 4500
-        result["Tags"] = ["Rooms.Linear.CustomBig"]
-        with open(f"generated/RMA_ICGEN_BIG{room}.json", "w") as f:
-            json.dump(result, f, indent=4)
+    result["Entrances"] = {}
+    for ii, entrance in enumerate(flatten(entrances)):
+        result["Entrances"].update(
+            {
+                f"Entrance_{ii}": {
+                    "Location": {
+                        "X": entrance[0],
+                        "Y": entrance[1],
+                        "Z": entrance[2],
+                    },
+                    "Type": entrance[-1],
+                    "Direction": {
+                        "Roll": entrance[3],
+                        "Pitch": entrance[4],
+                        "Yaw": entrance[5],
+                    },
+                }
+            }
+        )
+
+    result["Name"] = f"RMA_ICGEN_{key}{room_num}"
+    result["Bounds"] = settings["bounds"]
+    result["Tags"] = settings["tags"]
+
+    return result
+
+
+def main():
+
+    parser = argparse.ArgumentParser(description="Procedural generation of DRG rooms.")
+    parser.add_argument(
+        "-c",
+        "--config_path",
+        nargs="?",
+        default="settings/settings.json",
+        help="Path to the user configuration file. If not defined defaults to config/config.json.",
+    )
+    parser.add_argument(
+        "-o",
+        "--output_path",
+        nargs="?",
+        default=Path("generated"),
+        help="Path where the room JSONs will be written to. If not specified defaults to generated/.",
+    )
+    parser.add_argument(
+        "-k",
+        "--keys",
+        nargs="+",
+        default=None,
+        help="List of keys from the settings file that will be used for the generation.",
+    )
+    parser.add_argument("-n", "--number", type=int, default=20, help="Number of rooms for each key, defaults to 20.")
+    args = parser.parse_args()
+
+    try:
+        with open(args.config_path, "r") as f:
+            user_settings = json.load(f)
+    except Exception as e:
+        logging.error(f"Error opening configuration file {args.config_path}: {e}")
+
+    if args.keys is not None:
+        keys = args.keys
+    else:
+        keys = list(user_settings.keys())
+
+    for key in keys:
+        settings = user_settings[key]
+        for ii in range(args.number):
+            points = generate_room(settings)
+            entrances = generate_entrances(points)
+            generated_room = build_json(points, entrances, ii, key, settings)
+            try:
+                name = f"RMA_ICGEN_{key}{ii}.json" 
+                with open(Path(args.output_path) / name, "w") as f:
+                    json.dump(generated_room, f, indent=4)
+                logging.info(f"Writing file: {Path(args.output_path) / name}.")
+            except Exception as e:
+                logging.error(f"Error when writing the JSON file: {e}")
 
 
 if __name__ == "__main__":
