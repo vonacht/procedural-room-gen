@@ -1,0 +1,56 @@
+{
+  "SMALL": {
+    "num_rooms": 2,
+    "num_features": 1,
+    "avg_room_size": 600,
+    "next_room_offset": -200,
+    "avg_feature_size": 550,
+    "angle_percent": 20,
+    "pit_percent": 20,
+    "avg_room_height": 600,
+    "avg_feature_height": 550,
+    "room_size_variance": 50,
+    "feature_size_variance": 50,
+    "room_verticality": 1000,
+    "tags": [
+      "Rooms.Linear.CustomSmall"
+    ],
+    "bounds": 3000
+  },
+  "MEDIUM": {
+    "num_rooms": 2,
+    "num_features": 3,
+    "avg_room_size": 800,
+    "next_room_offset": 400,
+    "avg_feature_size": 550,
+    "angle_percent": 20,
+    "pit_percent": 20,
+    "avg_room_height": 800,
+    "avg_feature_height": 550,
+    "room_size_variance": 50,
+    "feature_size_variance": 50,
+    "room_verticality": 1000,
+    "tags": [
+      "Rooms.Linear.CustomMedium"
+    ],
+    "bounds": 3500
+  },
+  "BIG": {
+    "num_rooms": 3,
+    "num_features": 3,
+    "avg_room_size": 1000,
+    "next_room_offset": 500,
+    "avg_feature_size": 550,
+    "angle_percent": 20,
+    "pit_percent": 20,
+    "avg_room_height": 800,
+    "avg_feature_height": 550,
+    "room_size_variance": 50,
+    "feature_size_variance": 50,
+    "room_verticality": 1100,
+    "tags": [
+      "Rooms.Linear.CustomBig"
+    ],
+    "bounds": 4500
+  }
+}
