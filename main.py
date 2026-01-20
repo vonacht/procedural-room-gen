@@ -1,4 +1,5 @@
 import json
+import math
 import logging
 import random
 import argparse
@@ -77,31 +78,36 @@ def generate_room(settings: dict) -> list:
             if random.randint(1, 100) >= (100 - settings["angle_percent"])
             else 0
         )
+        new_direction = random.randint(0, 180)
+        sign = 1 if new_direction <= 90 else -1
+        new_direction = new_direction if new_direction <= 90 else (180 - new_direction)
+        new_direction = math.radians(new_direction)
+
+
         next_room = Point(
             (
                 int(
-                    np.random.normal(
-                        current_room.center[0]
-                        + current_room.radius
-                        + settings["next_room_offset"],
-                        100,
-                        1,
+                    current_room.center[0] + 
+                    math.sin(new_direction) * np.random.uniform(
+                        current_room.radius,
+                        current_room.radius + settings["next_room_offset"],
+                        1
                     )[0]
                 ),
-                random.choice([1, -1])
-                * int(
-                    np.random.normal(
-                        current_room.center[1]
-                        + current_room.radius
-                        + settings["next_room_offset"],
-                        100,
+                int(
+                    current_room.center[1] + 
+                    sign * 
+                    math.cos(new_direction) * 
+                    np.random.uniform(
+                        current_room.radius,
+                        current_room.radius + settings["next_room_offset"],
                         1,
                     )[0]
                 ),
                 int(
                     np.random.uniform(
                         -settings["room_verticality"] + current_room.center[2],
-                        settings["room_verticality"] + current_room.center[2],
+                        current_room.center[2],
                         1,
                     )[0]
                 ),
